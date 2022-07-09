@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="down-arrow_1_" width="30.74" height="30.74" viewBox="0 0 30.74 30.74">
+    <defs>
+        <style>
+            .cls-1{fill:#0091ea}
+        </style>
+    </defs>
+    <g id="Group_6528" transform="translate(0 18.792)">
+        <g id="Group_6527">
+            <path id="Path_14293" d="M28.338 313v8.345a1.2 1.2 0 0 1-1.2 1.2H3.6a1.2 1.2 0 0 1-1.2-1.2V313H0v8.345a3.606 3.606 0 0 0 3.6 3.6h23.538a3.606 3.606 0 0 0 3.6-3.6V313z" class="cls-1" transform="translate(0 -313)"/>
+        </g>
+    </g>
+    <g id="Group_6530" transform="translate(7.908)">
+        <g id="Group_6529">
+            <path id="Path_14294" d="M144.942 14.152l-4.563 4.563V0h-2.4v18.715l-4.563-4.563-1.7 1.7 7.462 7.462 7.462-7.462z" class="cls-1" transform="translate(-131.716)"/>
+        </g>
+    </g>
+</svg>
