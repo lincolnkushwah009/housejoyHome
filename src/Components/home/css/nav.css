@@ -131,6 +131,8 @@
 
     .navbar .menu-items{
         padding-top: 100px;
+
+        padding-right: 40px ;
         background: #3C3B5C;
         height: 100vh;
         max-width: 300px;
@@ -180,3 +182,24 @@
         /* display: none; */
     }
 }
+
+
+.footer{
+    height: 45px;
+    background-color:#37374a ;
+    margin-top:10px;
+    color: #fff;
+    
+}
+
+
+@media (max-width: 700px){
+    .footer{
+        height: auto;
+        background-color:#37374a ;
+        margin-top:10px;
+        color: #fff;
+        
+    }
+}
+

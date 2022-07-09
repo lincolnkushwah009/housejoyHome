@@ -42,6 +42,10 @@ class Index extends Component {
         });
     }
 
+    
+    
+
+
     render() {
 
 
@@ -52,9 +56,11 @@ class Index extends Component {
 
             emailjs.sendForm('service_c9azhhb', 'template_jt0xu7l', e.target, '6aCdv7mmH2DEULwUE')
                 .then((result) => {
+                    window.location.reload(false);
                     console.log(result.text);
                     console.log(result.text);
-                    window.location.reload();
+                   
+
 
                 }, (error) => {
                     console.log(error.text);
@@ -70,8 +76,7 @@ class Index extends Component {
             <div>
 
 
-
-                <Swiper
+<Swiper
                     // install Swiper modules
                     modules={[Navigation, Pagination, Scrollbar, A11y]}
                     spaceBetween={50}
@@ -81,102 +86,147 @@ class Index extends Component {
                     scrollbar={{ draggable: true }}
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log('slide change')}
-                    style={{padding:"40px"}}
+                    style={{ padding: "40px" }}
                 >
 
 
-                    <SwiperSlide>
-                        <div class="card swiper-slide">
-                            <div class="image-content">
-                                <span class="overlay"></span>
+                  
 
-                                <div class="card-image">
-                                    {/* <!--<img src="images/profile1.jpg" alt="" class="card-img">--> */}
+                    <SwiperSlide >
+                    <div class="cards">
+                                <div class="card-item">
+                                    <div class="card-image">
+                                    </div>
+                                    <div class="card-info">
+                                        <h2 class="card-title">Construction</h2>
+                                        <p class="card-intro">Project Management ConsultantWe provide end to end Construction services for Individual Residential Projects. From Ground Approvals, Documentation, Architectural Services, Material Vendors to Final Handover in a smooth and timely manner.</p>
+                                        <button onClick={this.toggle} type="button" class="btn btn-primary">Enquiry</button>
+
+                                    </div>
                                 </div>
+
+                               
                             </div>
-
-                            <div class="card-content">
-                                <h2 class="name">David Dell</h2>
-                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                                <button class="button" onClick={this.toggle}>Enquiry</button>
-                            </div>
-                        </div></SwiperSlide>
-
-                    <SwiperSlide> <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-                            <div class="card-image">
-                                {/* <!--<img src="images/profile1.jpg" alt="" class="card-img">--> */}
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                            <button class="button" onClick={this.toggle}>Enquiry</button>
-                        </div>
-                    </div></SwiperSlide>
-
-                    <SwiperSlide> <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-                            <div class="card-image">
-                                {/* <!--<img src="images/profile1.jpg" alt="" class="card-img">--> */}
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                            <button class="button" onClick={this.toggle}>Enquiry</button>
-                        </div>
-                    </div></SwiperSlide>
-
-                    <SwiperSlide> <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-                            <div class="card-image">
-                                {/* <!--<img src="images/profile1.jpg" alt="" class="card-img">--> */}
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                            <button class="button" onClick={this.toggle}>Enqiiry</button>
-                        </div>
-                    </div></SwiperSlide>
-
-                    <SwiperSlide> <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-                            <div class="card-image">
-                                {/* <!--<img src="images/profile1.jpg" alt="" class="card-img">--> */}
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                            <button class="button" onClick={this.toggle}>Enquiry</button>
-                        </div>
-                    </div>
                     </SwiperSlide>
 
 
 
 
 
+                    <SwiperSlide >
+                    <div class="cards">
+                                <div class="card-item">
+                                    <div class="card-image">
+                                    </div>
+                                    <div class="card-info">
+                                        <h2 class="card-title">ODS - Pest Control</h2>
+                                        <p class="card-intro">Complete Pest Control Services to protect your Residential, Commercial or Organizational  space from pests, insects and Cockroaches.<br/>Bed Bugs Control<br/>Termite Control</p>
+                                        <button onClick={this.toggle} type="button" class="btn btn-primary">Enquiry</button>
+
+                                    </div>
+                                </div>
+
+                               
+                            </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide >
+                    <div class="cards">
+                                <div class="card-item">
+                                    <div class="card-image">
+                                    </div>
+                                    <div class="card-info">
+                                        <h2 class="card-title">ODS - Home Repairs</h2>
+                                        <p class="card-intro">Get your home repair services done by verified & trusted professionals. Background verified & skilled professionals. <br/>Carpentry<br/>Electrician<br/>Plumbers </p>
+                                        <button onClick={this.toggle} type="button" class="btn btn-primary">Enquiry</button>
+
+                                    </div>
+                                </div>
+
+                               
+                            </div>
+                    </SwiperSlide>
+
+
+                    <SwiperSlide >
+                    <div class="cards">
+                                <div class="card-item">
+                                    <div class="card-image">
+                                    </div>
+                                    <div class="card-info">
+                                        <h2 class="card-title">ODS - Grooming and Relaxation</h2>
+                                        <p class="card-intro">Don't have enough time to visit a parlor? Relax at home and book trained professionals for waxing, threading, hair color, facial & clean up, & many more. <br/>Salon Service for women<br/>Salon Service for Men<br/>Spa Services for Women<br/>Spa Service for Men<br/>Party Makeup  </p>
+                                        <button onClick={this.toggle} type="button" class="btn btn-primary">Enquiry</button>
+
+                                    </div>
+                                </div>
+
+                               
+                            </div>
+                    </SwiperSlide>
+                    
+
+
+
+                    <SwiperSlide >
+                    <div class="cards">
+                                <div class="card-item">
+                                    <div class="card-image">
+                                    </div>
+                                    <div class="card-info">
+                                        <h2 class="card-title">ODS - Cleaning Service</h2>
+                                        <p class="card-intro">Complete cleaning services like deep cleaning, basic home cleaning by verified professionals at best price. <br/>Bathroom Deep Cleaning<br/>Kitchen Deep Cleaning<br/>Sofa and Carpet Cleaning</p>
+                                        <button onClick={this.toggle} type="button" class="btn btn-primary">Enquiry</button>
+
+                                    </div>
+                                </div>
+
+                               
+                            </div>
+                    </SwiperSlide>
+
+
+
+                    <SwiperSlide >
+                    <div class="cards">
+                                <div class="card-item">
+                                    <div class="card-image">
+                                    </div>
+                                    <div class="card-info">
+                                        <h2 class="card-title">ODS - Appliances</h2>
+                                        <p class="card-intro">Get your appliances repaired by our experts who are professionally trained & verified. Experts in Washing machines, AC Repair, Waterpurifier repair & many more. <br/>Servicing, Repair, Installation & Uninstallation<br/>Geyser<br/>Refrigerator<br/>Washing Machine</p>
+                                        <button onClick={this.toggle} type="button" class="btn btn-primary">Enquiry</button>
+
+                                    </div>
+                                </div>
+
+                               
+                            </div>
+                    </SwiperSlide>
+
+
+                    <SwiperSlide >
+                    <div class="cards">
+                                <div class="card-item">
+                                    <div class="card-image">
+                                    </div>
+                                    <div class="card-info">
+                                        <h2 class="card-title">ODS - Home Maintenance</h2>
+                                        <p class="card-intro">Bored of your home interiors and wondering who will give it a new look? We are here to help you with verified & curated professionals.  <br/>Painting
+Interior <br/>Renovate</p>
+                                        <button onClick={this.toggle} type="button" class="btn btn-primary">Enquiry</button>
+
+                                    </div>
+                                </div>
+
+                               
+                            </div>
+                    </SwiperSlide>
+                   
+
                 </Swiper>
+
+               
 
 
                 <div className='row'>
@@ -189,10 +239,18 @@ class Index extends Component {
 
 
                 <div className='row'>
-                    <div className='col-sm-3'><img style={{ height: "100px" }} src={one} /></div>
-                    <div className='col-sm-3'><img style={{ height: "100px" }} src={two} /></div>
-                    <div className='col-sm-3'><img style={{ height: "100px" }} src={three} /></div>
-                    <div className='col-sm-3'><img style={{ height: "100px" }} src={four} /></div>
+                    <div className='col-sm-3' style={{marginBottom: "50px"}}><img style={{ height: "70px", }} src={one} />
+                    <p>Verified Professionals</p>
+                    </div>
+                    <div className='col-sm-3'style={{marginBottom: "50px"}}><img style={{ height: "70px", }} src={two} />
+                    <p>Insured Work</p>
+                    </div>
+                    <div className='col-sm-3' style={{marginBottom: "50px"}}><img style={{ height: "70px", }} src={three} />
+                    <p>Re-work Assurance</p>
+                    </div>
+                    <div className='col-sm-3' style={{marginBottom: "50px"}}><img style={{ height: "70px", }} src={four} />
+                    <p>Professional Support</p>
+                    </div>
                 </div>
 
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
@@ -225,6 +283,7 @@ class Index extends Component {
                                 <fieldset>
                                     <textarea placeholder="Additional Information" tabindex="5" name="from_additional_information" required></textarea>
                                 </fieldset>
+
                                 <fieldset>
                                     <button name="submit" type="submit" id="contact-submit" value="Send Message" data-submit="...Sending">Submit</button>
                                 </fieldset>
