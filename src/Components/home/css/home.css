@@ -285,15 +285,21 @@ box-shadow: 1px 2px 17px black !important;
 *::after {
   box-sizing: border-box;
 }
-
-
-
-
+.cardBox {
+  display: flex;
+  -webkit-display: box;
+  -moz-display: box;
+  -ms-display: flexbox;
+  -webkit-display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 0;
+}
 .cards {
   display: flex;
   padding: 1rem;
   margin-bottom: 2rem;
-  width: 250px !important;
+  width: 100%;
 }
 @media (min-width: 40rem) {
   .cards {
@@ -302,7 +308,7 @@ box-shadow: 1px 2px 17px black !important;
 }
 @media (min-width: 56rem) {
   .cards {
-    width: 100% !important;
+    width: 33.3%;
   }
 }
 .cards .card-item {
@@ -315,9 +321,7 @@ box-shadow: 1px 2px 17px black !important;
   overflow: hidden;
   transition: transform 0.5s;
   -webkit-transition: transform 0.5s;
-  height: 500px;
 }
-
 .cards .card-item:hover {
   cursor: pointer;
   transform: scale(1.1);
@@ -340,11 +344,13 @@ box-shadow: 1px 2px 17px black !important;
   margin-bottom: 0.2em;
 }
 .cards .card-image {
-  height: 200px;
   overflow: hidden;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 6px 6px 0px 0px;
   opacity: 0.91;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
