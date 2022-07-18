@@ -1,20 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.d4add611.css",
-    "main.js": "/static/js/main.513d50f8.js",
+    "main.css": "/static/css/main.6d905da6.css",
+    "main.js": "/static/js/main.659480f6.js",
     "static/js/787.ed35b1b8.chunk.js": "/static/js/787.ed35b1b8.chunk.js",
+    "static/media/relax.png": "/static/media/relax.2481ba1d55962bd814d2.png",
+    "static/media/hook.png": "/static/media/hook.c82461051a10ed5c38d7.png",
+    "static/media/maintenance.png": "/static/media/maintenance.ed538dd5ce677c70dcd1.png",
     "static/media/2.png": "/static/media/2.15d51c3a1a2469aad441.png",
     "static/media/3.png": "/static/media/3.7fb8090f3203f9fd07ba.png",
     "static/media/4.png": "/static/media/4.f51a49418dae271c7ebc.png",
     "static/media/1.png": "/static/media/1.c75be25e269c93bd8009.png",
+    "static/media/home-appliance.png": "/static/media/home-appliance.fa4cfc3ef76093f0f29e.png",
+    "static/media/basket.png": "/static/media/basket.2592e582820d45484edd.png",
+    "static/media/renovation.png": "/static/media/renovation.a3b5437064994014c2dd.png",
+    "static/media/pest-control.png": "/static/media/pest-control.419ba6b5df520c38060b.png",
     "static/media/Logo.png": "/static/media/Logo.12a85f89b7b71cb51f0a.png",
     "index.html": "/index.html",
-    "main.d4add611.css.map": "/static/css/main.d4add611.css.map",
-    "main.513d50f8.js.map": "/static/js/main.513d50f8.js.map",
+    "main.6d905da6.css.map": "/static/css/main.6d905da6.css.map",
+    "main.659480f6.js.map": "/static/js/main.659480f6.js.map",
     "787.ed35b1b8.chunk.js.map": "/static/js/787.ed35b1b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4add611.css",
-    "static/js/main.513d50f8.js"
+    "static/css/main.6d905da6.css",
+    "static/js/main.659480f6.js"
   ]
 }

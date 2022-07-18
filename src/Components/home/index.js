@@ -1,8 +1,6 @@
-import React, { Component, useRef, form } from 'react';
-
+import React, { Component, useRef, form, useEffect } from 'react';
 import "./css/home.css"
-import "./js/home.js"
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {Modal, ModalHeader,ModalBody} from 'reactstrap';
 import Logo from '../assets/Logo.png'
 import emailjs from '@emailjs/browser';
 import one from '../assets/1.png'
@@ -12,27 +10,14 @@ import four from '../assets/4.png'
 import Hook from '../assets/hook.png'
 import Maintenance from '../assets/maintenance.png'
 import HomeAppliance from '../assets/home-appliance.png'
-import Bucket from '../assets/bucket.png'
 import Basket from '../assets/basket.png'
 import Relax from '../assets/relax.png'
 import pestControl from '../assets/pest-control.png'
 import renovation from '../assets/renovation.png'
 
+import 'react-autocomplete-input/dist/bundle.css';
+import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
-
-
-
-
-
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 
 
 
@@ -47,33 +32,48 @@ class Index extends Component {
         this.state = {
             modal: false
         };
+      
+        this.state ={
+            suggestions : [],
+        }
 
         this.toggle = this.toggle.bind(this);
     }
 
+  
+
+
     toggle() {
         this.setState({
             modal: !this.state.modal
+
         });
     }
 
+    
+    
 
+    
+    
 
 
 
     render() {
 
 
+
         function sendEmail(e) {
             console.log("sending email....");
 
+
             e.preventDefault();
 
-            emailjs.sendForm('service_c9azhhb', 'template_jt0xu7l', e.target, '6aCdv7mmH2DEULwUE')
+            emailjs.sendForm('service_jhw7rui', 'template_c2mtg4h', e.target, 'GBbAPRHGmxHct933q')
                 .then((result) => {
                     window.location.reload(false);
                     console.log(result.text);
-                    console.log(result.text);
+                    console.log(result);
+                    
 
 
 
@@ -82,19 +82,75 @@ class Index extends Component {
                 });
             e.target.reset()
         }
+        let ID =  Math. random(). toString(36). substr(2, 9);
 
+
+        
+ const items = [
+    {
+      
+      name: 'Cobol'
+    },
+    {
+      
+      name: 'JavaScript'
+    },
+    {
+     
+      name: 'Basic'
+    },
+    {
+      
+      name: 'PHP'
+    },
+    {
+      
+      name: 'Java'
+    }
+  ]
+
+  const handleOnSearch = (string, results) => {
+    // onSearch will have as the first callback parameter
+    // the string searched and for the second the results.
+    console.log(string, results)
+  }
+
+  const handleOnHover = (result) => {
+    // the item hovered
+    console.log(result)
+  }
+
+  const handleOnSelect = (item) => {
+    // the item selected
+    console.log(item)
+  }
+
+  const handleOnFocus = () => {
+    console.log('Focused')
+  }
+
+  const formatResult = (item) => {
+    return (
+      <>
+        <span style={{ display: 'block', textAlign: 'left' }}> {item.name}</span>
+      </>
+    )
+  }
+       
+               
 
 
         return (
 
 
             <div >
+               
                 <div class="cardBox">
-                <div class="cards">
+                    <div class="cards">
                         <div class="card-item">
                             <div class="card-image">
-                            <img style={{ height: "150px", }} src={Hook} />
-                          
+                                <img style={{ height: "150px", }} src={Hook} />
+
                             </div>
                             <div class="card-info">
                                 <h2 class="card-title">Construction</h2>
@@ -106,11 +162,11 @@ class Index extends Component {
 
 
                     </div>
-            
+
                     <div class="cards">
                         <div class="card-item">
                             <div class="card-image">
-                            <img style={{ height: "150px", }} src={pestControl} />
+                                <img style={{ height: "150px", }} src={pestControl} />
 
                             </div>
                             <div class="card-info">
@@ -123,11 +179,11 @@ class Index extends Component {
 
 
                     </div>
-            
+
                     <div class="cards">
                         <div class="card-item">
                             <div class="card-image">
-                            <img style={{ height: "150px", }} src={renovation} />
+                                <img style={{ height: "150px", }} src={renovation} />
                             </div>
                             <div class="card-info">
                                 <h2 class="card-title">ODS - Home Repairs</h2>
@@ -139,14 +195,14 @@ class Index extends Component {
 
 
                     </div>
-               
 
 
-          
+
+
                     <div class="cards">
                         <div class="card-item">
                             <div class="card-image">
-                            <img style={{ height: "150px", }} src={Relax} />
+                                <img style={{ height: "150px", }} src={Relax} />
                             </div>
                             <div class="card-info">
                                 <h2 class="card-title">ODS - Grooming and Relaxation</h2>
@@ -158,11 +214,11 @@ class Index extends Component {
 
 
                     </div>
-             
+
                     <div class="cards">
                         <div class="card-item">
                             <div class="card-image">
-                            <img style={{ height: "150px", }} src={Basket} />
+                                <img style={{ height: "150px", }} src={Basket} />
                             </div>
                             <div class="card-info">
                                 <h2 class="card-title">ODS - Cleaning Service</h2>
@@ -174,11 +230,11 @@ class Index extends Component {
 
 
                     </div>
-            
+
                     <div class="cards">
                         <div class="card-item">
                             <div class="card-image">
-                            <img style={{ height: "150px", }} src={HomeAppliance} />
+                                <img style={{ height: "150px", }} src={HomeAppliance} />
                             </div>
                             <div class="card-info">
                                 <h2 class="card-title">ODS - Appliances</h2>
@@ -190,11 +246,11 @@ class Index extends Component {
 
 
                     </div>
-     
+
                     <div class="cards">
                         <div class="card-item">
                             <div class="card-image">
-                            <img style={{ height: "150px", }} src={Maintenance} />
+                                <img style={{ height: "150px", }} src={Maintenance} />
                             </div>
                             <div class="card-info">
                                 <h2 class="card-title">ODS - Home Maintenance</h2>
@@ -211,7 +267,7 @@ class Index extends Component {
 
 
 
-              
+
 
 
 
@@ -232,9 +288,9 @@ class Index extends Component {
 
 
 
-               
-                    
-            
+
+
+
 
 
                 {/* </Swiper> */}
@@ -277,25 +333,65 @@ class Index extends Component {
 
                         <div class="container">
                             <form onSubmit={sendEmail} id="contact" action="" method="post">
-
+                              
+                                <fieldset style={{display:"none"}}>
+                                    <input placeholder="Ticket ID" name="from_Ticket_ID" type="text" value={ID} tabindex="1"  />
+                                </fieldset>
+                                
                                 <fieldset>
-                                    <input placeholder="Your name" name="user_name" type="text" tabindex="1" required autofocus />
+                                    <input placeholder="Your name" name="from_name" type="text" tabindex="1" required autofocus />
                                 </fieldset>
                                 <fieldset>
                                     <input placeholder="Your Email Address" type="email" name="from_email" tabindex="2" required />
                                 </fieldset>
-                                <fieldset>
-                                    <input placeholder="City" type="text" tabindex="3" name="from_city" required />
-                                </fieldset>
+                         
                                 <fieldset>
                                     <input placeholder="Address" type="text" tabindex="4" name="from_address" required />
                                 </fieldset>
                                 <fieldset>
-                                    <input placeholder="Services Interested For" type="text" tabindex="4" name="from_service_intersted_for" required />
+                                    <input placeholder="Phone Number" type="text" tabindex="4" name="from_phone" required />
                                 </fieldset>
+
+                               
+                                <fieldset>
+
+             
+
+          <ReactSearchAutocomplete
+            items={items}
+            placeholder= "City"
+            onSearch={handleOnSearch}
+            onHover={handleOnHover}
+            onSelect={handleOnSelect}
+            onFocus={handleOnFocus}
+            autoFocus
+            formatResult={formatResult}
+            required
+          />
+                                </fieldset>
+
+    
+
+                                <fieldset>
+                                    <select name='from_service_intersted_for' class="form-select form-select-lg mb-3" style={{fontSize: "12px"}} aria-label=".form-select-lg ">
+                                        <option selected >Select Services Interested For</option>
+                                        <option value="Construction">Construction</option>
+                                        <option value="ODS - Pest Control">ODS - Pest Control</option>
+                                        <option  value="ODS - Home Repairs">ODS - Home Repairs</option>
+                                        <option  value="ODS - Grooming and Relaxation">ODS - Grooming and Relaxation</option>
+                                        <option  value="ODS - Cleaning Service">ODS - Cleaning Service</option>
+                                        <option  value="ODS - Appliances">ODS - Appliances</option>
+                                        <option  value="ODS - Home Maintenance">ODS - Home Maintenance</option>
+
+                                    </select>
+                                </fieldset>
+
+
                                 <fieldset>
                                     <textarea placeholder="Additional Information" tabindex="5" name="from_additional_information" required></textarea>
                                 </fieldset>
+
+
 
                                 <fieldset>
                                     <button name="submit" type="submit" id="contact-submit" value="Send Message" data-submit="...Sending">Submit</button>
